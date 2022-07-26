@@ -1,0 +1,30 @@
+public class Language{
+    protected String name;
+    protected int numSpeakers;
+    protected String regionsSpoken;
+    protected String wordOrder;
+
+    //constructor
+    public Language(String langName, int langNumSpeakers, String langRegionsSpoken, String langWordOrder){
+        name = langName;
+        numSpeakers = langNumSpeakers;
+        regionsSpoken = langRegionsSpoken;
+        wordOrder = langWordOrder;
+    }
+
+    public void getInfo(){
+        System.out.println(this.name+ " is spoken by " + this.numSpeakers + " people mainly in " + this.regionsSpoken +".");
+        System.out.println("The language follows the word order: " + this.wordOrder + ".");
+    }
+
+    public static void main(String[] args){
+        Language greek = new Language("Greek",20000000,"all over the world", "subject-verb-object");
+        greek.getInfo();
+        Mayan chol = new Mayan("Chʼol", 212117);
+        chol.getInfo();
+        SinoTibetan mandarinChinese = new SinoTibetan("Mandarin Chinese", 836000000);
+        SinoTibetan burmese = new SinoTibetan("Burmese", 33000000);
+        mandarinChinese.getInfo();
+        burmese.getInfo();
+    }
+}
